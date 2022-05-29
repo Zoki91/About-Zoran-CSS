@@ -1,3 +1,13 @@
+:root {
+  --bgcolor1: darkgray;
+  --bgcolor0: white;
+  --bgcolor3: rgba(19, 81, 250, 0.486);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -7,13 +17,14 @@ body {
 
 #navigation-container {
   position: relative;
-  background-color:darkgray;
+  background-color: darkgray;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   text-decoration: underline;
   text-underline-offset: 0.7em;
   overflow: auto;
+  width: 100;
 }
 
 ul {
@@ -50,6 +61,7 @@ p {
   font-family: Helvetica;
   position: relative;
   display: flex;
+  font-size: 20px;
 
 }
 
@@ -60,6 +72,7 @@ h2 {
   display: inline;
   margin-left: 11px;
   margin-top: 20px;
+
 }
 
 h3 {
@@ -86,8 +99,8 @@ h3 {
 
 
 .linkImg {
-  position:relative;
-  top:-10px;
+  position: relative;
+  top: -10px;
 }
 
 .linkImg img {
@@ -98,12 +111,11 @@ h3 {
 }
 
 .card header {
-  position:relative;
-  top:-40px;
-  width:200px;
-  height:25px;
-  padding: 20px;
-  background: var(--bgcolor0);
+  position: relative;
+  top: -40px;
+  width: 200px;
+  height: 25px;
+
 }
 
 .card:hover {
@@ -112,19 +124,31 @@ h3 {
   text-size-adjust: 150%;
 }
 
-
 #social img {
-  opacity: 50%;
-}
-#social:hover img {
-  opacity:100%;
-  transform: scale(1.1);  
+
+  width: 50px;
+
 }
 
+#social:hover img {
+  opacity: 100%;
+  transform: scale(1.1);
+}
+
+#contact img {
+  opacity: 50%;
+
+
+}
+
+#contact:hover img {
+  opacity: 100%;
+  transform: scale(1.1);
+}
 
 .card {
-  width: 80%; 
-  height:240px;
+  width: 80%;
+  height: 240px;
   max-height: 240px;
   padding: 20px;
   padding-left: 10px;
@@ -138,4 +162,33 @@ main {
   flex-wrap: wrap;
   justify-content: left;
   padding: 50px;
+}
+
+footer {
+  bottom: 0;
+  padding: 10px;
+  text-align: center;
+  background: var(--bgcolor1);
+  color: white;
+  margin-top: auto;
+  width: 100;
+}
+
+
+@media (max-width: 640px) {
+  #navigation-container {
+    text-align: center;
+  }
+
+  #navigation-container {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 0.8em 0;
+  }
 }
